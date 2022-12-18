@@ -1,0 +1,268 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package textadventure;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author user
+ */
+public class TextAdventure {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner pilih = new Scanner(System.in);
+        boolean cont = true;
+
+        int command;
+        do {
+            System.out.println("Kamu terbangun di sebuah hutan belantara. Pepohonan yang lebat ini hampir tidak membiarkan sinar matahari tuk masuk"
+                    + " sehingga kamu tidak dapat melihat dengan jelas.");
+            System.out.println("...... \n....... \n..........");
+            System.out.println("1. Menjelajahi hutan \t2. Mencari Makanan \t3. Memanjat Pohon \t4. Bunuh Diri");
+            System.out.print("> ");
+            command = pilih.nextInt();
+
+            if (command == 1) {
+                System.out.println("\n Kamu memutuskan untuk menjelajahi hutan yang lebat ini karena dirasa tidak ada gunanya berdiam diri saja."
+                        + "\n Selama beberapa jam menjelajahi hutan ini, kamu menemukan sebuah sumur tua yang nampak sudah lama tak terurus.");
+                System.out.println("1. Cek Sumur \t2. Lanjut menjelajah");
+                System.out.print("> ");
+                command = pilih.nextInt();
+
+                if (command == 1) {
+                    System.out.println("\n Kamu memutuskan untuk melakukan pengecekan terhadap sumur tersebut."
+                            + "\n Kamu berharap setidaknya ada sedikit air yang tersisa untuk mengobati rasa kering di tenggorokanmu."
+                            + "\n Kamu menimba sumur tersebut dan rasa berat yang kamu rasakan ketika menariknya membuka secercah harapan kalo itu merupakan air."
+                            + "\n Namun, perasaan itu seketika pudar ketika kamu melihat apa yang ada timbaan bukan air melainkan sebatang emas murni!");
+                    System.out.println("1. Ambil Emas Tersebut \t2. Lanjut menjelajah");
+                    System.out.print("> ");
+                    command = pilih.nextInt();
+                    if (command == 1) {
+                        System.out.println("\n Kamu dengan ceroboh mengambil emas tersebut dan menggenggammnya dengan tangan kosong!"
+                                + " Tanpa kamu ketahui kalau emas itu merupakan benda terkutuk yang mana akan mengambil setiap nyawa orang yang memegangnya!"
+                                + "\n Kamu pun dengan pasrah membiarkan pusaka itu mengambil nyawamu sembari terbaring dengan lemas di tanah.");
+                        System.err.println("Game Over");
+
+                        cont = false;
+                    } else if (command == 2) {
+                        System.out.println("\n Kamu memutuskan untuk lanjut menjelajahi hutan karena kamu menganggap tidak ada yang bisa dilakukan dengan sebatang emas di dalam hutan ini."
+                                + "\n Tak disangka setelah beberapa saat menjelajah, langkahmu terhenti karena dihadang oleh sekelompok serigala buas!"
+                                + "\n Mereka nampak sangat lapar dan menatap dirimu dengan nafsu membera untuk segera menghabisi dirimu!");
+                        System.out.println("1. Lari Menyelamatkan Diri \t2. Lawan Serigala Tersebut!");
+                        System.out.print("> ");
+                        command = pilih.nextInt();
+                        if (command == 1) {
+                            System.out.println("Berpikir mustahil untuk menghadapi mereka sendirian, kamu pun langsung berbalik dan lari sekuat tenaga meninggalkan mereka."
+                                    + "\n Kamu kembali melewati sumur yang sebelumnya kamu temui dan tak jauh dai sana terdapat sebuah pondok kecil yang terbuat dari bambu.");
+                            System.out.println("1. Loncat ke dalam Sumur \t2. Bersembunyi ke dalam Pondok \t3. Terus Berlari");
+                            System.out.print("> ");
+                            command = pilih.nextInt();
+
+                            if (command == 1) {
+                                System.out.println("\n Karena panik, kamu tanpa pikir panjang langsung melompat ke dalam sumur yang ternyata sangat dalam"
+                                        + "\n dan seketika kamu mendarat, seluruh tubuhmu hancur karena tidak dapat menahan efek dari kuatnya gravitasi"
+                                        + "\n menarik dirimu ke dasar sumur."
+                                        + "\n Kamupun mati.");
+                                System.err.println("Game Over");
+                                cont = false;
+                            } else if (command == 2) {
+                                System.out.println("\n Kamu memutuskan bersembunyi di dalam pondok tersebut. Dengan nafas terengah-engah kamu menutup pintunya dengan cepat"
+                                        + "\n dan berdiri di belakangnya sambil menutup mulutmu. Kamu sudah hampir putus asa namun kemudian secercah harapan muncul ketika kamu medengar"
+                                        + "\n langkah kaki mereka berjalan melewati pondok tempatmu bersembunyi. Setelah beberapa saat memperbaiki nafasmu yang terenggah-engah, kamu kemudian memutuskan untuk mengamati isi dari pondok ini."
+                                        + "\n Tidak banyak yang bisa diamati, hanya ada meja tua dan kursi yang nampaknya akan hancur seketika ketika diduduki."
+                                        + "\n Tapi, di sudut pondok terdapat sebuah kasur kecil yang muat untuk satu orang. Kamu mencek kasur itu dan memutuskan kalau kasur ini masih layak pakai."
+                                        + "\n Setelah memikirkannya dengan matang, kamu memutuskan untuk menjadikan pondok ini sebagai markasmu. Karena ini lebih baik daripada berkeliaran tidak jelas."
+                                        + "\n Kamu pun merebahkan dirimu dikasur tersebut sembari memikirkan apa yang akan kamu lakukan selanjutnya.");
+                                System.out.println("1. Beristirahat \t2. Mencari Makan");
+                                System.out.print("> ");
+                                command = pilih.nextInt();
+
+                                if (command == 1) {
+                                    System.out.println("\n Kamu memutuskan untuk beristirahat karena badanmu sudah sangat lelah untuk diajak beraktivitas lagi."
+                                            + "\n Kamu kemudian memilih untuk tidur dan memutuskan untuk kembali menjelajah esok hari.");
+                                    System.out.println("...... \n.......... \n........ \n To Be Continue");
+                                    cont = false;
+                                } else if (command == 2) {
+                                    System.out.println("\n Suara perutmu yang lapar membuyarkan lamunanmu. Kamu teringat kalau dirimu masih belum memakan apapun hari ini."
+                                            + "\n Kamupun memutuskan untuk mencari makan. Tapi kamu menyadari bahwa kemungkinan buruk seperti tadi mungkin akan kembali terjadi."
+                                            + "\n Kamu coba mengamati sekitar pondok sambil memikirkan cara menghadapi hewan liar yang mungkin akan kembali mengganggu dirimu."
+                                            + "\n Seketika mataku terhenti pada sebuah pecahan kaca seukuran pisau dapur. Kamu mengambilnya dan mengamati benda tersebut."
+                                            + "\n Kamu berpikir bahwa benda ini akan sangat membantu dalam menjelajah jadi kamu memutuskan untuk membawanya."
+                                            + "\n Namun ada masalah lainnya, pecahan kaca itu tajam, tentu saja. Jika tidak berhati-hati itu dapat melukai dirimu sendiri.");
+                                    System.out.println("1. Lapisi Ujung Tumpulnya dengan Kain \t2. Biarkan Seperti Itu");
+                                    System.out.print("> ");
+                                    command = pilih.nextInt();
+
+                                    if (command == 1) {
+                                        System.out.println("Kamu merobek ujung bajumu dan membalukannya ke ujung tumpul pecahan yang akan digunakan sebagai gagang.");
+                                        System.out.println("Sekarang semuanya sudah siap, kamu memegang senjatamu dengan erat dan perlahan membuka pintu pondok. Dengan ini setidaknya dapat "
+                                                + "\n memperbesar persentase untuk bertahan hidup di hutan yang misterius ini.");
+                                        System.out.println(".......... \n......... \n......... \nTo Be Continue");
+                                        cont = false;
+                                    } else if (command == 2) {
+                                        System.out.println("Kamu memutukannya untuk membiarkannya seperti apa adanya.");
+                                        System.out.println("Sekarang semuanya sudah siap, kamu memegang senjatamu dengan erat dan perlahan membuka pintu pondok. Dengan ini setidaknya dapat "
+                                                + "\n memperbesar persentase untuk bertahan hidup di hutan yang misterius ini.");
+                                        System.out.println(".......... \n......... \n......... \nTo Be Continue");
+                                        cont = false;
+                                    }
+                                }
+
+                            } else if (command == 3) {
+                                System.out.println("\n Kamu terus berlari sekuat tenagamu sambil sesekali menoleh ke bekalakang, berharap para serigala itu tidak mengejar dirimu."
+                                        + "\n Namun sayang, serigala tersebut benar-benar telah membulatkan niatnya untuk menjadikanmu sebagai makan malam mereka."
+                                        + "\n Tapi sayang, ketidak beruntungan kembali menghampiri dirimu. Kamu tersandung oleh batang besi yang tadi kamu temukan."
+                                        + "\n Entah bagaimana batang besi itu bisa berada di sini. Tapi kamu sekarang tidak memiliki waktu untuk memikirkannya karena dihadapanmu telah ada 3 serigala yang siap menerjang."
+                                        + "\n Dengan putus asa, kamu mencoba menendang batang besi yang tadi menjegalmu dengan ujung kakimu. Kamu berhasil menendangnya dengan susah payah dan batang besi tersebut melayang menghantam kepala dari salah satu serigala tersebut."
+                                        + "\n Kamu pasrah, memangnya apa yang bisa dilakukan sebatang emas terhadap serigala? Tapi seketika itu juga kamu terkejut karena ternyata serigala yang terhantam oleh emas tersebut"
+                                        + "\n tiba-tiba kejang-kejang dan tersungkur di tanah. Kawanannya lainnya yang melihat itu langsung berlari kalah kabut meninggalkannya teman serigalanya sendirian."
+                                        + "\n Beberapa saat kemudian, serigala itu berhenti bergerak dan terkulai dengan lemas, nampak tak bernyawa."
+                                        + "\n Kamu memberanikan dirimu untuk menceknya secara dekat dan benar saja serigala tersebut ternyata sudah mati. Kamu kemudian mengalihkan pandanganmu ke emas yang telah'membunuh' serigala ini."
+                                        + "\n Kamu berpikir, emas macam apa yang dapat membuat serigala kejang-kejang seperti itu dan mati?");
+                                System.out.println("....... \n....... \n....... \nTo Be Continue");
+                                cont = false;
+                            }
+                        } else if (command == 2) {
+                            System.out.println("\n Kamu dengan pikiran yang kacau memilih ide gila untuk menghadapi kumpulan serigala itu dengan tangan kosong!"
+                                    + "\n Walau tentu saja itu tidak berakhir dengan baik yang mana badamu dicabik-cabik oleh mereka dan dijadikan santapan untuk makan malam mereka.");
+                            System.err.print("\n Game Over");
+                            cont = false;
+                        }
+                    }
+                } else if (command == 2) {
+                    System.out.println("\n Kamu memutuskan untuk lanjut menjelajahi hutan karena kamu menganggap tidak mungkin sumur tua tersebut masih memiliki air,"
+                            + "\n Tak disangka setelah beberapa saat menjelajah, langkahmu terhenti karena dihadang oleh sekelompok serigala buas!"
+                            + "\n Mereka nampak sangat lapar dan menatap dirimu dengan nafsu membera untuk segera menghabisi dirimu!");
+                    System.out.println("1. Lari Menyelamatkan Diri \t2. Lawan Serigala Tersebut!");
+                    System.out.print("> ");
+                    command = pilih.nextInt();
+                    if (command == 1) {
+                        System.out.println("Berpikir mustahil untuk menghadapi mereka sendirian, kamu pun langsung berbalik dan lari sekuat tenaga meninggalkan mereka."
+                                + "\n Kamu kembali melewati sumur yang sebelumnya kamu temui dan tak jauh dai sana terdapat sebuah pondok kecil yang terbuat dari bambu.");
+                        System.out.println("1. Loncat ke dalam Sumur \t2. Bersembunyi ke dalam Pondok \t3. Terus Berlari");
+                        System.out.print("> ");
+                        command = pilih.nextInt();
+                        if (command == 1) {
+                            System.out.println("\n Karena panik, kamu tanpa pikir panjang langsung melompat ke dalam sumur yang ternyata sangat dalam"
+                                    + "\n dan seketika kamu mendara. seluruh tubuhmu hancur karena tidak dapat menahan efek dari kuatnya gravitas"
+                                    + "\n menarik dirimu ke dasar sumur."
+                                    + "\n Kamupun mati.");
+                            System.err.println("Game Over");
+                            cont = false;
+                        } else if (command == 2) {
+                            System.out.println("\n Kamu memutuskan untuk bersembunyi ke dalam pondok tua tersebut. Kamu dengan cepat menuntup pintunya dengan rapat"
+                                    + "\n dan coba menahan rasa takut yang berada di ujung lidahmu."
+                                    + "\n Kamu tidak dapat melihatnya namun kamu dapat mendengar bahwa mereka, serigala-serigala itu berada tepat di depan pondok."
+                                    + "\n Kamu tidak tau berapa lama mereka akan bertahan. Kamu mendengar suara sesuatu yang keras menghantam tanah, sesuatu yang mungkin jatuh dari pohon."
+                                    + "\n Kamu tidak terlalu peduli dengan bunyi tersebut, tapi nampaknya para serigala tidak demikian. Kamu perlahan mendengar mereka berlari"
+                                    + "\n menjauh dari pondok. Seketika perasaan lega menghampiri dirimu dan kamu terduduk dengan lemas di lantai pondok."
+                                    + "\n "
+                                    + "\n Kamu ternyata sedikit terisak karena ketakutan akan kemungkinan serigala tersebut menerobos masuk ke dalam pondok."
+                                    + "\n Setelah berhasil menenangkan dirimu, kamu memberanikan diri untuk membuka sedikit dan mengintip dari sela-sela pintu. Nampak diluar sangat gelap gulita."
+                                    + "\n Kamu sekarang berbaring dengan rasa takut, kamu sadar rasanya mustahil untuk keluar dari hutan ini secara hidup-hidup."
+                                    + "\n Sekarang hanya ada dua pilihan tersisa yang bisa kamu lakukan.");
+                            System.out.println("1. Menguatkan Teakd untuk Bertahan Hidup \t2. Akhiri Semuanya di sini.");
+                            System.out.print("> ");
+                            command = pilih.nextInt();
+
+                            if (command == 1) {
+                                System.out.println(" Kamu tau kalau nampak mustahil untuk keluar dari hutan ini. Tapi, kamu tidak ingin menyerah begitu saja!"
+                                        + "\n Oleh karena, itu kamu membulatkan tekadmu untuk bertahan hidup di hutan belantara ini! Dan kamu memutuskan untuk menjadikan pondok ini sebagai markasmu."
+                                        + "\n Kamu mulai memikirkan berbagai cara untuk bertahan di hutan ini, namun sayang rasa kantuk tidak mengijinkan dirimu berpikir dengan keras malam ini."
+                                        + "\n Kamu lelah setelah apa yang kamu alami seharian ini. Oleh karena itu kamu dengan perlahan memejamkan matamu untuk bersiap menyambut hari esok."
+                                        + "\n Hari dimana kamu akan menjalankan semua rencana yang smaar-samar telah ada di benakmu untuk bertahan hidup.");
+                                System.out.println("...... \n......... \n.......... \n To Be Continue.....");
+
+                                cont = false;
+                            } else if (command == 2) {
+                                System.out.println("\n Kamu putus asa. Kamu memutuskan untuk mengakhir semuanya karena kamu merasa ini sia-sia. Tidak mungkin kamu bisa keluar dari sini."
+                                        + "\n Kamu menerima fakta bahwa kamu akan terjebak selamanya di sini tapi kamu tidak dapat menghadapi kenyataan ini. Tidak ada gunanya menahan rasa sakit dan sedih ini lebih lama lagi."
+                                        + "\n Kamu mengambil serpihan kaca sebesar pisa daput yang tergelatak dibawah meja rusak. Dengan berlinang air mata, kamu mengakhiri hidupmu dengan menyayatkan pecahan kaca tersebut ke lehermu."
+                                        + "\n Yang kamu lihat terakhir kali sebelum meninggalkan dunia ini adalah tanganmu yang berlumuran dengan darah segar yang menyembur keluar dari sayatan di lehermu...");
+                                System.err.println("\n Game Over");
+                                cont = false;
+                            }
+
+                        }
+                    } else if (command == 2) {
+                        System.out.println("\n Kamu dengan pikiran yang kacau memilih ide gila untuk menghadapi kumpulan serigala itu dengan tangan kosong!"
+                                + "\n Walau tentu saja itu tidak berakhir dengan baik yang mana badamu dicabik-cabik oleh mereka dan dijadikan santapan untuk makan malam mereka.");
+                        System.err.print("\n Game Over");
+                        cont = false;
+                    }
+
+                }
+
+            } else if (command == 2) {
+                System.out.println("\n Kamu memutuskan untuk mencari makanan dengan menjelajah sekitar tempat dimana kamu terbangun."
+                        + "\n Setelah beberapa jam, kamu hanya menemukan apel dan mangga");
+                System.out.println("1. Makan Apel \t2. Makan Mangga");
+                System.out.print("> ");
+                command = pilih.nextInt();
+                if (command == 1) {
+                    System.out.println("\n Setelah memikirkannya dengan matang, kamu memutuskan untuk memakan buah apel tersebut karena"
+                            + " akan sangat merepotkan untuk memakan mangga yang mana harus mengupas kulitnya terlebih dahulu."
+                            + "\n Kamu memakan apel itu dengan lahap! Tapi beberapa saat kemudian kamu merasakan sakit perut yang sangat kuat"
+                            + " diiringi dengan rasa mual yang hebat. Tak dapat menahannya, kamu memuntahkan apel tadi beserta seluruh isi perutmu."
+                            + "\n Tapi itu tidak dapat menolongmu karena ketika itu juga kesadaranmu perlahan mulai menghilang hingga kamu tak dapat merasakan apa-apa lagi.");
+                    System.out.print(".................\n"
+                            + "....................\n"
+                            + "Apel yang kamu makan ternyata beracun! \n");
+
+                    System.err.println("Game Over!");
+                    cont = false;
+                } else if (command == 2) {
+                    System.out.println("\n Kamu lebih memilih untuk memakan mangga daripada apel karena kamu merasa bosan dengan apel."
+                            + "\n Tapi kamu bingung bagaimana untuk mengupas kulitnya.");
+                    System.out.println("1. Cari Sesuatu untuk Mengupas Mangga \t2. Simpan Mangga Tersebut ");
+                    System.out.print("> ");
+                    command = pilih.nextInt();
+                    if (command == 1) {
+                        System.out.println("\n To Be Continue");
+                        cont = false;
+                    } else if (command == 2) {
+                        System.out.println("\n Kamu memutuskan untuk menyimpan mangga itu dalam genggamanmu dan lanjut menjelajahi hutan");
+                        System.out.println("....... \n......... \n........ \nTo Be Continue");
+                        cont = false;
+                    }
+                }
+            } else if (command == 3) {
+                System.out.println("\n Kamu memutuskan untuk memanjat pohon tempat di mana kamu berbaring sebelumnya."
+                        + "\n Perlahan namun pasti, walau cukup sulit karena pohon itu cukup licin, kamu berhasil memanjat cukup tinggi."
+                        + "\n Kamu kemudian memutuskan untuk duduk di salah satu dahan yang nampak kuat dan kokoh untuk menahan dirimu."
+                        + "Kamu berpikir mungkin akan cukup mudah untuk mengamati hutan ini jika kamu memanjat pohon ini. Namun sayang, itu tidak seperti yang kamu pikirkan."
+                        + "\n Sejauh matamu memandang, kamu hanya melihat pepohonan lainnya yang rimba dan semak belukar yang lebat.");
+                System.out.println("1. Lanjut Mengamati \t2. Turun dari pohon");
+                System.out.print("> ");
+                command = pilih.nextInt();
+                if (command == 1) {
+                    System.out.println("\n Rasa penasaran dalam dirimu membuatmu bertahan di dahan pohon dan kembali mengamati sekitar dengan fokus ekstra."
+                            + "\n Dan tak disangka-sangka, usaha itu tidak sia-sia. Kamu melihat sesuatu dari kejauhan, nampak seperti seorang manusia yang seumuran dengamu."
+                            + "Tapi kamu tidak tau apakah dia perempuan atau laki-laki karena jarakmu yang jauh tak memungkinkan untuk mengetahui bagaimaan wajahnya.");
+                    System.out.println("...... \n....... \n......... \nTo Be Continue");
+                    cont = false;
+                } else if (command == 2) {
+                    System.out.println("Karena dirasa tidak ada gunanya, kamu memutuskan untuk turun dari pohon. Tapi sayang, kamu tidak tau kalau sesuatu telah menunggu di bawah");
+                    System.out.println("......... \n....... \n........ \nTo Be Continue");
+                    cont = false;
+                }
+            } else if (command == 4) {
+                System.out.println("\n Entah apa yang ada dibenakmu, kamu memutuskan untuk mengakhiri hidupmu di sini. Kamu membiarkan dirimu kelaparan dan kehausan"
+                        + "\n selama tiga hari sebelum akhirnya kamu mati");
+                System.err.println("\n Game Over");
+            }
+            cont = false;
+
+        } while (cont);
+
+    }
+
+}
